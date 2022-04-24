@@ -1,0 +1,253 @@
+---
+title: "Econ 520 - Midterm 2"
+author: "Aravind Mannarswamy"
+date: "04/11/2022"
+output:
+  pdf_document:
+    fig_caption: yes
+    fig_height: 4
+    fig_width: 6
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+
+```
+
+
+# Short Essay Questions   
+
+## 4- and 8-firm seller concentration ratio; Herfindahl index   
+
+### 4-firm seller concentration   
+
+4-firm seller concentration is the combined market share of the largest(top) market share holders within the market. Mathematically, it can be written as follows:   
+
+$CR_4 = s_1 + s_2 + s_3 + s_4$   
+
+where `s1` to `s4` are the largest top-4 firms individual market shares.  
+
+It is a measure of fewness. The closer the sum is to one, the fewer the number of firms are and thereby less competitive. There is as such no basis for using 4-firm over 5-firm or any n-firm. 
+
+### 8-firm seller concentration  
+
+8-firm seller concentration ratio is similar to the 4-firm seller concentration ratio, except that instead of top-4 large firms, top-8 large firms are considered. Inherently this may not necessarily be advantageous over the 4-firm ratio. However, using both the ratios together may offer better insight into the industry competitiveness.  
+
+### Herfindahl index   
+
+Herfindahl index is defined as the sum of squares of the market share of all the firms in an industry. If there are n-firms in an industry, the Herfindahl index is mathematically expressed as follows:  
+
+$H = s_1^2 + s_2^2+...+s_n^2$   
+
+Since all the individual ratios are between 0 and 1, their sum of squares will also be between 0 and 1. If the `H` value is closer to 1, then the industry is almost monopolistic while a value closer to 0 would mean almost perfectly competitive. A value of 1 would mean that there is exactly one firm and hence it will be pure monopoly if this value is 1. If the market shares are measured in percent, then this value ranges between 0 and 10000.  
+
+## Numbers-equivalent property of the Herfindahl index   
+
+Numbers equivalent measure is the inverse of H-index. Conceptually, it refers to the number of firms in an industry. Consider the following examples:
+
+1. s1=0.5 and s2=0.5, H = 0.25+0.25 = 0.5, 1/H = 1/0.5 = 2. So if two equal sized market shares contribute to a value of 2 in the inverse H-index.  
+2. s1=s2=s3=s4 = 0.25, H = 0.0625 * 4 = 0.25, 1/H = 4. Meaning it is equivalent to 4 equal sized firms.  
+3. s1=0.9, s2=0.1, H = 0.81+0.01 = 0.82, 1/H = 1.23. Now this is saying that the industry is closer to the monopoly. Though there are two sellers, one of them dominates the market.   
+
+## 4-firm seller concentration of manufacturing industries in 2002   
+
+The CR4 ratio of 2002 suggest that the manufacturing industry side has a supply side structure of moderately concentrated oligopoly. Referring to the table from class notes, only 26 industries had a CR value greater than 0.80 while 161 of the 413 had a CR4 value greater than or equal to 50%. These industries accounted for 41.17% of the value of shipments. 175 of the 413 had a CR4 less than 40% accounting for 38.02 percent of the value of the shipment. Considering these factors together in cohesion, it can be concluded that the typical 6-digit NAICS US manufacturing industry had the supply side structure of a moderately concentrated oligopoly.   
+
+## CR8 between 1995 and 2015   
+
+Referring to the figure in the class notes and referring to the article from Gutierrez and Philippon on nber.org, the US CR8 ratio increased steadily since 1995. From just over 0.2 in 1995 to just below 0.3 in 2015. Signifying the decreasing number of firms(or the larger market share of the existing firms) and therefore diminished competition(or move towards monopoly) but is still technically oligopoly because the number is not anywhere close to 1. Comparing EU for the same period, EU-Country curve shows increased competitiveness between 1995 and 2015(from about 0.35 in 1998 to 0.3 in 2015) while that of the EU-Aggregate is almost held steadily around 0.1 signifying large number of firms on the supply side.   
+
+
+
+
+
+
+# Experimental evidence   
+
+## Cournot model   
+
+Charles Holt provided the experimental evidence in support of Cournot model. He selected a duopoly situation, for a standardized product with constant marginal cost where the inverse demand is given by the following equation:   
+
+$p = 12 - 1/2(q_1 + q_2)$   
+
+the experimental subjects were all on the supply side of the market while the computer played the role of the market demand side based on the equation.   
+
+Based on analytically approach, the following were found and it is also the intent of the experiment to provide evidence of that.  
+
+1. Cournot - 8 each - 16 total  
+2. Joint-profit maximizing - 6 each - 12 total  
+3. Competitive(Bertrand) - 12 each - 24 total   
+
+24 students were selected in 12 pairs and the experiment was conducted in two sessions. The second session is conducted to potentially study the impact of experience. All 24 students participated as the supply side while the computer played the demand side in the first session. In the second session, 16 of those students were called back and continued the experiment.    
+
+Based on the results, he concluded that the final period industry outputs are between 14 and 16(while 16 would be exact Cournot model based prediction). Holt also reported that based on other experiments, Cournot model does a good job of predicting outcomes of single period experimental sessions.  
+
+## Product differentiation   
+
+Huck et al(2000) provided the experimental evidence of Cournot and Bertrand models in four supplier markets that involves product differentiation. The demand side, similar to the Holts experiment, was simulated by an experimental program with marginal cost of 2 per unit and which follows the following inverse price equation:   
+
+$p_1 = 300 - q_1-(2/3)(q_2 + q_3 + q_4)$  
+
+Analytically, the solutions were found to be:  
+1. Cournot equilibrium total supply = 74.5  
+2. Bertrand equilibrium total supply = 86.9 with price 39.25   
+
+The experiment was conducted in 40 rounds and the last 5 of those 40 experiments(to rule out the effect of experience in the market) are as follows:  
+1. Cournot = quantity is 74.20 reported(theoretical is 74.5)  
+2. Bertrand = price is 36.25 reported(theoretical is 41.91).   
+
+## Contestable markets   
+
+Coursey et al.(1984a) conducted duopoly experiments simulating contestable markets where each supplier produces with increasing returns to scale with no sunk or entry costs. The intent is to prove that under perfect competition, the price should converge to marginal cost.  
+
+The experimenters reported 6 duopoly experiments where four of them converged directly to the competitive equilibrium predictions while two of them never achieved though visual inspection of those two as well suggested that are moving in the direction of perfect competition equilibrium.   
+
+He also changed the dynamics by introducing \$2 entry permit. However, this did not stop entry when it was profitable for the firms to do so. Sunk costs did have some effect during temporary periods where the market performance where farther from the competitive outcome than predicted if it would have been in the absence of sunk cost.  
+
+
+
+
+
+
+
+# Duopoly Problem   
+  
+
+## Given   
+
+1. Two identical firms  
+2. Cost: $c(q_i) = q_i$ where i = 1,2 for firms 1 and 2 respectively   
+3. Price1: $p_1 = 19 - \frac{1}{2}(q_1 + \frac{2}{5}q_2)$   
+4. Price2: $p_2 = 19 - \frac{1}{2}(q_2 + \frac{2}{5}q_1)$    
+
+## Setting-1: Firms set quantities   
+
+The objective of the firm is to maximize profit. Let us consider for firm-1:   
+
+$\pi_1 = R - C$ where `R` is revenue and `C` is cost.   
+
+$\pi_1 = p_1q_1 - q_1$    
+
+$\pi_1 = q_1(p_1 - 1)$   
+
+
+Substituting the value of p1,   
+
+$\pi_1 = q_1(19 - \frac{1}{2}(q_1 + \frac{2}{5}q_2) - 1)$   
+
+$\pi_1 = q_1(18 - \frac{1}{2}(q_1 + \frac{2}{5}q_2))$   
+
+$\pi_1 = q_1(18 - \frac{1}{2}(q_1 + \frac{2}{5}q_2))$   
+
+To satisfy the first order condition, differentiate the above with respect to q1. Using the chain rule to differentiate   
+
+$0 = q_1(-1/2) + (18 - \frac{1}{2}(q_1 + \frac{2}{5}q_2))$   
+
+$0 = 18 - q_1 - q_2/5$   
+
+Also both firms being identical, we know q1=q2 = qc,   
+
+Substituting and solving, we get   
+
+$q_c + q_c/5 = 18$  
+
+$q_1=q_2 = 15$   
+
+Substituting in the inverse demand equation,   
+
+$p_1 = 19 - 1/2(15 + (2/5).15)$   
+
+$p_1 = p_2 = 8.5$   
+
+$Profit(payoff) = (8.5-1)15$  
+
+$\pi_1 = \pi_2 = 112.5$   
+
+## Setting-2: Firms set prices   
+
+Same as before, the objective of the firms are still to maximize profit.  
+
+The objective of the firm is to maximize profit. Let us consider for firm-1:   
+
+$\pi_1 = R - C$ where `R` is revenue and `C` is cost.   
+
+$\pi_1 = p_1q_1 - q_1$    
+
+$\pi_1 = q_1(p_1 - 1)$   
+
+However, instead of differentiating it with respect to q1, we will differentiate it with respect to p1.   
+
+From the 2nd firms inverse demand equation,   
+
+
+$-2p_2 + 38 = q_2 + (2/5)q_1$   
+
+$q_2 = 38 - 2p_2 -  (2/5)q_1$    
+
+Substituting the above in the firm-1s inverse demand curve,   
+
+$p_1 = 19 - 1/2(q_1 + (2/5)(38 - 2p_2 - (2/5)q_1))$   
+
+$p_1 = 11.4 - 0.42q_1 + 0.4p_2$   
+
+Rearranging,   
+
+$q_1 = (1/0.42)(11.4 - p_1 + 0.4p_2)$   
+
+Going back to the profit equation   
+
+$\pi_1 = q_1(p_1 - 1)$   
+
+Subs q1  
+
+$\pi_1 = (1/0.42)(11.4 - p_1 + 0.4p_2)(p_1 - 1)$   
+
+To satisfy the first order condition, differentiate it with respect to p1 and equate it to zero.   
+
+Using chain rule to differentiate, and using the identical firm fact(p1=p2)
+
+$(p_1-1)(-1/0.42) + (1/0.42)(11.4 - p_1 + 0.40) = 0$   
+
+$p1 = 7.75$   
+
+and when p1 = 7.75,  
+
+$7.75 = 19 - 0.5q_1 - 0.2q1$  
+
+$0.7q_1 = 11.25$   
+
+$q_1 = 16.07143$   
+
+and the payoff will be  
+
+(7.75-1)16.07143 = 108.4821   
+
+
+
+## Compare the two   
+
+The firms that set prices have lower prices(and hence higher quantities). This is because firms that set prices are highly competitive compared to those that set quantities as noted in the lecture videos.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

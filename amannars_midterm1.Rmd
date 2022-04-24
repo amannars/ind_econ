@@ -1,0 +1,259 @@
+---
+title: "Econ 520 - Midterm 1"
+author: "Aravind Mannarswamy"
+date: "3/28/2022"
+output:
+  pdf_document:
+    fig_caption: yes
+    fig_height: 4
+    fig_width: 6
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+
+```
+
+\newpage  
+
+# Interstate Commerce Act of 1887   
+
+## Factors that led to the adoption of the Interstate Commerce Act of 1887   
+
+
+1. Provisions included in their bankruptcy: Railroads in the 1880s were either natural monopolies or natural oligopolies. When they raise capital through bonds, the interest payments have to paid regardless of their earnings. However, when they go bankrupt, the investments cannot be liquidated and remain as sunk cost. They are not allowed to close as they received public funding and in the interest of public welfare by means of commerce. They were also releived of any interest payments on the pre-banruptcy loans.  
+2. Rate Wars: The railroad lines cut their costs to attract or retain business during an economic downturn and sometimes they tried to collude, creating an anti-competitive situation. The rate fluctuation were also a cause for concern for the shippers as freight charges formed significant cost of the total cost.  
+3. Long-Short Wage Discrimination: The rates were inconsistent between long and short hauls. The short hauls were expensive than the long hauls even if the long haul passes through the same short haul stage.  
+4. Monopsony: Railroad companies colluded to keep the wages to a minimum.  
+5. NYC Merchants: The railroad companies can focus on routes that can be seen as a threat to the local market's dominant position.  
+6. Threat to local merchants: With the movement of goods and scaling technology, the local merchats faced threats from out of local suppliers.  
+
+In summary, all these groups supported the regulation but for different reasons in mind.  
+
+## Policy:  
+
+1. ICA set up the Interstate Commerce Commssion with some ground rules to render impartial guidelines and policies regarding railroad industry. The policies were established as a guidelines initially and not with clear mandates with the objective being "just and reasonable" fright rates. However, the commission itself did not fix the prices.  
+2. It prohibited the long-short haul rate discrimination and personal rate discrimination.  
+3. ICA prohibited 'pooling' and therefore were not able to establish cartels.  
+
+The above are the key features of the ICA 1887.   
+
+## Leading up to abolition of ICA   
+
+1. In the early stages, the supreme court interpreted them to be mostly in an "advisory role" but soon that changed to make it a mandate setting role. They controlled the maximum price ceiling that can be set.  
+2. The railway industry were plagued with two sets of issues, one from the inhertent nature of the business and market while the other stemmed from the ICA like for example, "reluctance to allow abandonment of unprofitable lines"(quoted from the class notes)   
+3. Between 1917 and 1920 when the railroads were nationalized, it began facing competition from the commercial trucking industry. Primarily because of the ICC, the rates were not able to reflect the market conditions and were not able to invest enough to stay cvompetitive. This was exacerbated when the country's highway infrastructure improved.  
+4. In 1935, the commercial trucking industry was absorbed by the ICC regulatory. This also made the uneconomic railroad rate protected from its competing modes of shipment.  
+5. Eventually, in 1995 the ICC was dissolved and the mandate authority of the railroad moved to the Surface Transportation Authority.   
+
+
+# Monopoly: Profit maximizing behaviour  
+
+## If entry by a higher-cost firm is possible   
+
+1. If entry by a higher-cost firm is possible, then the monopolist may hold their position by committing at a price level that is just below the average cost of the new entrant. By doing this, the monopolist makes the new entrant's production unprofitable and thereby continue to keep them away from the market.   
+2. However, for the reason stated above, the presence of a potential higher-cost rival reduces the ability of the monopolist to exercise the market power of a single supplier.  
+
+## Producing durable consumer good   
+
+1. When the supplier produces a durable good, they will likely face a time inconsistency phenomena. That is the interest of the monopolist at any time in the future may not be consistent with their interests at all of the time.  
+2. According to Coase, the producer of a durable good will only be able to sell the product at a competitive price. That is at the marginal cost.  
+3. They may try to squeeze profits by gradually decreasing the price but this may force the consumers to wait till the firm reduces its price. For that reason, the monopolist will have to commit to keep the price high.  
+4. The monopolist may have to employ some strategies to keep their demands high at even high prices like leasing the product(think microsoft office that moved from a product to a service that can be leased), keep releasing newer versions with more capability or even reducing the durability of the product.  
+
+## If there is a second-hand market  
+
+1. In the event there is a second-hand market for a durable good, the second hand sales pose competition to the firms present sales in the future. A monopolist would recognize this loss due to its own competition and discount that loss into the current sales price.  
+2. The monopolist will also reduce the quantity of goods produce equal to the disounted future value of all the losses due to its own competition.  
+
+## Consumers exhibit loss aversion   
+
+1. When consumers exhibit loss aversion behavior, and have a reference price equal to the marginal cost, the consumers will purchase only when the price is equal to or less than the marginal cost. At equilibrium, marginal cost will also be the market clearing cost. At this level, the monopolist do not have any significant advantage of being a monopoly.  
+2. To counter this effect, the monopolist produces less and therefore keeps the marginal cost high, instead of pushing the price and quantity to the market clearing equilibrium.   
+3. The monopolist normally extracts profit from Consumer surplus and that extraction will be reduced.  
+
+
+
+
+
+# Market Equlibirum   
+
+$p = 1428 - 7Q$  
+
+Where `Q` is the industry output which is equal to `Nq` where `N` is the total number of firms and `q` is the quantity produced by an individual firm.  
+
+$C(q) = 100q - 72q^2 + 18q^3$   
+
+## Average cost and Marginal cost   
+
+### Average Cost equation   
+
+$AC(q) = C(q)/q$   
+
+$AC(q) = \frac{100q - 72q^2 + 18q^3}{q}$   
+
+$AC(q) = 100 - 72q + 18q^2$   
+
+### Marginal Cost Equation   
+
+$MC(q) = \frac{dC(q)}{dq}$   
+
+$MC(q) = \frac{d(100q - 72q^2 + 18q^3)}{dq}$   
+
+$MC(q) = 100 - 144q + 54q^2$   
+
+### Graph of Average and Marginal Cost   
+
+```{r}
+q = seq(0,3,0.1)
+cq = 100 * q - 72 * q^2 + 18 * q^3
+acq = cq/q
+mcq = 100 - 144*q + 54*q^2
+df3 = data.frame(Q = q,
+                # Cost = cq,
+                 AvgCost = acq,
+                 MargCost = mcq)
+df3 %>%
+  pivot_longer(cols = c(AvgCost,MargCost), names_to = 'CostType', values_to = 'Cost') %>% 
+  ggplot()+
+  aes(x = Q, y = Cost, color = CostType)+
+  geom_line()+
+  theme_bw()+
+  annotate(geom = "point", x = 2, y = 28, color = "red")+
+  annotate(geom = "text", x = 1.85, y =34, color = "red", label = "(2,28)")
+               
+```
+
+
+### Output minimizing the firm's average cost   
+
+At the minimum point, the first derivative of the average cost is equal to zero.   
+
+$dAC(q)/dq = 0$   
+
+$\frac{d(100-72q+18q^2)}{dq} = 0$   
+
+$-72 + 36q = 0$   
+
+$q* = 2$   
+
+Also we can verify this from the graph.   
+
+### Minimum value of average cost for a firm   
+
+$AC(q) = 100 - 72q + 18q^2$   
+
+$AC(2) = 100 - 72(2) + 18(2^2)$   
+
+$AC(2) = 28$   
+
+This can also be found at the point where the marginal cost intersects the average cost(shown graphically).   
+
+### Long run equilibrium   
+
+The long run equilibirum price will be 28 as found in the previous section.  
+
+Substituting the equilibirum price and quantity in the demand equation,  
+
+$p = 1428 - 7Q$   
+
+$p = 1428 - 7Nq$   
+
+$28 = 1428 - 14N$  
+
+$N = 100$   
+
+In the long run, there will be 100 firms.   
+
+### Consumer Surplus   
+
+100 firms will produce 200 units(2 units each).  
+
+Social Surplus will be  
+
+$SS = 0.5 * (100-28)(200)$  
+
+$SS = 72 * 100$   
+
+Consumer surplus will be   
+
+$CS = 0.5 * (100-28)(2)$  
+
+$CS = 72$   
+
+## Short Term equilibrium   
+
+N = 90 firms   
+
+$p = 1428 - 7 * 90 q$   
+
+$p = 1428 - 630q$   
+
+Since at q = 2, the AC and MC are equal, it will also be what each firm will produce.  
+
+$p = 1428 - 630 * 2$  
+
+$p = 1428 - 1260$   
+
+$p = 168$   
+
+Profit Per Firm = revenue per firm - cost per firm   
+
+Profit = pq - C(q)  
+
+Profit = 168(2) - 100(2)+72(2^2)-18(2^3)   
+
+Profit = 280 per firm   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

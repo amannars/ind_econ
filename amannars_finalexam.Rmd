@@ -1,0 +1,41 @@
+---
+title: "Econ 520 - Final Exam"
+author: "Aravind Mannarswamy"
+date: "04/24/2022"
+output:
+  pdf_document:
+    fig_caption: yes
+    fig_height: 4
+    fig_width: 6
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+
+```
+
+
+# Short Essay Questions   
+
+## Trigger Strategy   
+
+Trigger strategy is called a trigger strategy because the defection of one producer from the monopoly price, triggers all the producers to adhere to Cournot equilibirum quantity. This is because, when one of the producers defect from monopoly equilibrium by producing more, they increase their profits for that period while others who are producing the monopoly equilibrium suffer. This triggers other producers to produce at Cournot equilibrium. This action makes the first producer who defected to go to Cournot equilibrium as well and hence everyone produces at the Cournot equilibirum forever.  
+As an example, consider a duopoly with two producers who produce at duopoly equilibrium. In the first period, they both are expected to produce 1/2 the monopoly equilibrium quantity. For the subsequent period, if the price is less than monopoly price, then start producing Cournot equilibrium forever. This will also push the other producer to switch to Cournot equilibrium and they both will stick to it forever in a non-cooperating equilibrium.  
+
+## Institutional arrangements to make collusion work   
+
+### 15th Century alum cartel   
+
+The Ottoman empire assumed sovereignity over the rich alum deposits when they conquered Constantinople(modern day Istanbul). They charged high rents to exploit the alum deposits which increased the cost of alum for Europe. Eventually, two sources of alum were found in Italy(and Rome). The pope was able to restrict the Turkish competition by making it illegal to import Turkish alum to the Christendom. However, there was internal competition between the two sources within Europe. To combat this, the Pope and King Ferdinand I entered a cartel agreement that is to last for 25 years by making the following institutional arrangements.   
+Under these terms, neither party can make sales without informaing the other party and that each party is to supply exactly 1/2 of the sale. The cartel also decided on the prices at which transactions tool place. If in case, one of the two parties were to sell at a lower price, then the lost profit of the other party was to be made up. All sales were to be cash with no barter and credit not extending beyond a period of one year, with severe financial penalties for violation. Each party to the agreement had a representative at the mines and warehouses and were free to inspect records of alum extracted and shipped by the other party.   
+This enabled the Vatican to extract the economic profits of the arrangement for almost two centuries by getting control of competing mines and shutting them down, thereby keeping the production low and by setting price just below the level which would make competing firms inoperable.   
+
+### 19th century railroad   
+
+
+
+The pope granted exclusive right to expolit these deposits to a consortium of merchants in return for specified payments. This naturally means there is an agreement or contract within this consortium of merchants. 
